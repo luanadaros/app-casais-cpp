@@ -8,6 +8,7 @@ class PessoaJuridica {
         PessoaJuridica(string, string, string, string, string);
         string getNome();
         static bool comparaCnpj(PessoaJuridica, PessoaJuridica);
+        friend class Loja;
         ~PessoaJuridica();
 };
 

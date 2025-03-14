@@ -1,19 +1,21 @@
 #include <string>
 #include <ctime>
-#include "pessoa_fisica.hpp"
-#include "casamento.hpp"
+#include "TipoPessoa/pessoa_fisica.hpp"
+#include "Evento/casamento.hpp"
+#include "Evento/novo_lar.hpp"
+
 using namespace std;
 
 class Casal{
     private:
         PessoaFisica p1, p2;
-        Casamento casamento;
-        //NovoLar novoLar;
+        Casamento * casamento;
+        NovoLar * novoLar;
     
     public:
-        Casal(PessoaFisica, PessoaFisica);
-        void setCasamento(Casamento);
-        //void setNovoLar(NovoLar);
+        Casal(PessoaFisica&, PessoaFisica&);
+        void setCasamento(Casamento&);
+        void setNovoLar(NovoLar&);
 
         void atualizaPoupancaCasal(double);
         void atualizaRendimentoPoupancaCasal();
@@ -21,8 +23,8 @@ class Casal{
         string getNomeP2();
         string getCpfP1();
         string getCpfP2();
-        Casamento getCasamento();
-        //NovoLar getNovoLar();
+        Casamento * getCasamento();
+        NovoLar * getNovoLar();
         tm getDataFesta();
         tm getMenorDataInicioTarefas();
         tm getDataInicioPlanejamento();

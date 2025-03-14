@@ -4,6 +4,9 @@
 #include "tarefa.hpp"
 using namespace std;
 
+namespace evento{
+    class NovoLar;
+}
 class NovoLar {
     private:
         string id, rua, numero, complemento;

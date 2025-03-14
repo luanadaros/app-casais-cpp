@@ -5,13 +5,17 @@
 
 using namespace std;
 
+namespace atividades{
+    class Tarefa;
+}
+
 class Tarefa {
     private:
         string id, idPrestador;
         tm dataInicio;
         int prazoEntrega, numParcelas, qtdParcelasPagas = 0;
         double valorPrestador;
-        vector <Compra&> compras;
+        vector <Compra*> compras;
     
     public:
         Tarefa(string id, string idPrestador, string dataInicio, string prazoEntrega, string valorPrestador, string numParcelas);
