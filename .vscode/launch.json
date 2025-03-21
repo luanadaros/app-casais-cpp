@@ -1,14 +1,15 @@
 {
     "version": "0.2.0",
     "configurations": [
+
         {
             "name": "Debug C++",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${fileDirname}/${fileBasenameNoExtension}.exe",
-            "args": [],
+            "program": "${workspaceFolder}/prog",
+            "args": ["Casos/01/"],
             "stopAtEntry": false,
-            "cwd": "${fileDirname}",
+            "cwd": "${workspaceFolder}",
             "environment": [],
             "MIMode": "gdb",
             "setupCommands": [
